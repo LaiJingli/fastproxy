@@ -4,7 +4,7 @@ fastproxy 是一个快速的代理智能线路选择脚本,在访问一些有多
 1、有多个可以通过混淆ssh连接的proxy server；
 2、配合chrome的switchysharp代理选择插件；
 3、需要有安装sshpass；
-4、ssh client需要支持obfuscated功能,安装方法参见http://blog.csdn.net/xuyaqun/article/details/42970627；
+4、ssh client需要支持obfuscated功能,安装方法参见http://blog.csdn.net/xuyaqun/article/details/42970627
 
 
 适用系统：mac os & linux
