@@ -17,8 +17,13 @@ ssh_server_ports=(80 110 11231 10813)
 ###ssh相关参数定义
 ssh_user_name=sshuser1
 ssh_user_pass=123456
-sshpass_cmd="/bin/sshpass -p$ssh_user_pass "
-ssh_obf_cmd="/usr/local/newssh/bin/ssh -o StrictHostKeyChecking=no -p 110 -fCND 127.0.0.1:7070 -Z keyworks "
+sshpass_path=/bin/sshpass
+ssh_obf_path=/usr/local/newssh/bin/ssh
+###自动添加hostkey、keepalive选项
+ssh_obf_options="-o StrictHostKeyChecking=no -o ServerAliveInterval=30 -p 110 -fCND 127.0.0.1:7070"
+ssh_obf_keyword=keyworks
+sshpass_cmd="$sshpass_path -p$ssh_user_pass "
+ssh_obf_cmd="$ssh_obf_path $ssh_obf_options -Z $ssh_obf_keyword "
 
 ###定义运行此脚本所在os的ping返回结果格式
 ping_os_type_macos="round-trip"
